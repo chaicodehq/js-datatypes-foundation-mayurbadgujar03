@@ -48,45 +48,55 @@
 export function repeatPattern(pattern, times) {
   // Your code here
   if (typeof pattern !== "string" || !Number.isInteger(times) || times <= 0) {
-    return ""
+    return "";
   }
-  
-  return pattern.repeat(times)
+
+  return pattern.repeat(times);
 }
 
 export function extractRangoliCenter(design, start, end) {
   // Your code here
-  if (typeof design !== "string" || !Number.isInteger(start) || !Number.isInteger(end) || start < 0 || end < 0) {
-    return ""
+  if (
+    typeof design !== "string" ||
+    !Number.isInteger(start) ||
+    !Number.isInteger(end) ||
+    start < 0 ||
+    end < 0
+  ) {
+    return "";
   }
-  
-  return design.slice(start, end)
+
+  return design.slice(start, end);
 }
 
 export function splitAndJoinRangoli(colorString, oldSep, newSep) {
   // Your code here
   if (typeof colorString !== "string") {
-    return ""
+    return "";
   }
-  return colorString.split(oldSep).join(newSep)
+  return colorString.split(oldSep).join(newSep);
 }
 
 export function replaceRangoliColor(design, oldColor, newColor) {
   // Your code here
-  if (typeof oldColor !== "string" || typeof design !== "string" || typeof newColor !== "string") {
-    return ""
+  if (
+    typeof oldColor !== "string" ||
+    typeof design !== "string" ||
+    typeof newColor !== "string"
+  ) {
+    return "";
   }
 
-  return design.replaceAll(oldColor, newColor)
+  return design.replaceAll(oldColor, newColor);
 }
 
 export function makeRangoliBorder(char, length) {
   // Your code here
   if (typeof char !== "string" || !Number.isInteger(length) || length <= 0) {
-    return ""
+    return "";
   }
 
-  let repeated = char.repeat(Math.ceil( length / char.length ));
+  let repeated = char.repeat(Math.ceil(length / char.length));
 
-  return repeated.slice(0, length)
+  return repeated.slice(0, length);
 }

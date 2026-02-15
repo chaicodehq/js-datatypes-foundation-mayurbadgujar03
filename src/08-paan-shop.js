@@ -70,7 +70,11 @@ export function freezeMenu(menu) {
 
 export function updatePrices(menu, increase) {
   // Your code here
-  if (typeof menu !== "object" || menu === null || typeof increase !== "number") {
+  if (
+    typeof menu !== "object" ||
+    menu === null ||
+    typeof increase !== "number"
+  ) {
     return {};
   }
 

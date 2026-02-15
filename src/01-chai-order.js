@@ -48,15 +48,15 @@
 export function getChaiOrderLength(order) {
   // Your code here
   if (typeof order !== "string") {
-    return -1
+    return -1;
   }
-  return order.trim().length
+  return order.trim().length;
 }
 
 export function shoutChaiOrder(order) {
   // Your code here
   if (typeof order !== "string" || order.trim() === "") {
-    return ""
+    return "";
   }
   return order.trim().toUpperCase();
 }
@@ -64,31 +64,34 @@ export function shoutChaiOrder(order) {
 export function whisperChaiOrder(order) {
   // Your code here
   if (typeof order !== "string" || order.trim() === "") {
-    return ""
+    return "";
   }
   return order.trim().toLowerCase();
 }
 
 export function hasSpecialIngredient(order, ingredient) {
   // Your code here
-  if (typeof order !== "string" || order.trim() === "" || typeof ingredient !== "string") {
-    return false
+  if (
+    typeof order !== "string" ||
+    order.trim() === "" ||
+    typeof ingredient !== "string"
+  ) {
+    return false;
   }
-  let orderLowerCase = order.toLowerCase()
-  let ingredientLowerCase = ingredient.toLowerCase()
+  let orderLowerCase = order.toLowerCase();
+  let ingredientLowerCase = ingredient.toLowerCase();
 
-  return orderLowerCase.includes(ingredientLowerCase)
+  return orderLowerCase.includes(ingredientLowerCase);
 }
 
 export function getFirstAndLastChar(order) {
   // Your code here
   if (typeof order !== "string" || order.trim() === "") {
-    return null
+    return null;
   }
 
-  let first = order.trim().at(0)
-  let last = order.trim().at(-1)
+  let first = order.trim().at(0);
+  let last = order.trim().at(-1);
 
-
-  return { first, last }
+  return { first, last };
 }

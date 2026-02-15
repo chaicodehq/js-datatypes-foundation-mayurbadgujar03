@@ -53,14 +53,14 @@
 export function getItemNames(items) {
   // Your code here
   if (!Array.isArray(items)) return [];
-  
+
   return items.map((item) => item.name);
 }
 
 export function getAffordableItems(items, maxPrice) {
   // Your code here
-  if (!Array.isArray(items || typeof maxPrice !== 'number')) return [];
-  
+  if (!Array.isArray(items || typeof maxPrice !== "number")) return [];
+
   return items.filter((item) => item.price <= maxPrice);
 }
 
@@ -68,26 +68,30 @@ export function calculateTotal(items) {
   // Your code here
   if (!Array.isArray(items) || items.length == 0) return 0;
 
-  return items.reduce((sum, item) => { return sum + item.price * item.qty}, 0);
+  return items.reduce((sum, item) => {
+    return sum + item.price * item.qty;
+  }, 0);
 }
 
 export function sortByPrice(items, ascending) {
   // Your code here
-  if (!Array.isArray(items) ) return [];
+  if (!Array.isArray(items)) return [];
 
-  let sortedItems
+  let sortedItems;
 
-  if(!ascending) {
-    sortedItems = [...items].sort((a, b) => b.price - a.price)
+  if (!ascending) {
+    sortedItems = [...items].sort((a, b) => b.price - a.price);
   } else {
-    sortedItems = [...items].sort((a, b) => a.price - b.price)
+    sortedItems = [...items].sort((a, b) => a.price - b.price);
   }
-  return sortedItems
+  return sortedItems;
 }
 
 export function formatBill(items) {
   // Your code here
   if (!Array.isArray(items) || items.length == 0) return "";
 
-  return items.map((item) => `${item.name} x ${item.qty} = Rs.${item.qty * item.price}`).join("\n")
+  return items
+    .map((item) => `${item.name} x ${item.qty} = Rs.${item.qty * item.price}`)
+    .join("\n");
 }

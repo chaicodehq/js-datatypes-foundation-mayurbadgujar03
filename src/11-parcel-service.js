@@ -56,47 +56,47 @@ export function parcelToJSON(parcel) {
 
   try {
     if (parcel === undefined) return "";
-    
-    return JSON.stringify(parcel)
+
+    return JSON.stringify(parcel);
   } catch (error) {
-    return ""
+    return "";
   }
 }
 
 export function jsonToParcel(jsonString) {
   // Your code here
-  if (typeof jsonString !== 'string') {
-    return null
+  if (typeof jsonString !== "string") {
+    return null;
   }
   try {
-    return JSON.parse(jsonString)
+    return JSON.parse(jsonString);
   } catch (error) {
-    return null
+    return null;
   }
 }
 
 export function convertToString(value) {
   // Your code here
 
-  return String(value)
+  return String(value);
 }
 
 export function convertToNumber(value) {
   // Your code here
 
-  if(Number.isNaN(Number(value))) {
-    return NaN
+  if (Number.isNaN(Number(value))) {
+    return NaN;
   }
 
-  return Number(value)
+  return Number(value);
 }
 
 export function stringToChars(str) {
   // Your code here
 
-  if(typeof str !== 'string') {
-    return []
+  if (typeof str !== "string") {
+    return [];
   }
 
-  return Array.from(str)
+  return Array.from(str);
 }

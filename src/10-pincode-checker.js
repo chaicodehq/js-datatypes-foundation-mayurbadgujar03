@@ -71,7 +71,7 @@ export function getDataType(value) {
 
 export function isValidParcelWeight(weight) {
   // Your code here
-  if (Number.isNaN(weight) || !Number.isFinite(weight) || weight <= 0 ) {
+  if (Number.isNaN(weight) || !Number.isFinite(weight) || weight <= 0) {
     return false;
   } else {
     return true;
@@ -90,12 +90,12 @@ export function isWholeNumber(value) {
 export function isNotANumber(value) {
   // Your code here
 
-  return Number.isNaN(value)
+  return Number.isNaN(value);
 }
 
 export function isTruthy(value) {
   // Your code here
-  if(value) {
+  if (value) {
     return true;
   } else {
     return false;
