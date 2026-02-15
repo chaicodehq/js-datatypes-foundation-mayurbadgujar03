@@ -136,10 +136,10 @@ export function generateThaliReceipt(customerName, thalis) {
   const total = thalis.reduce((sum, t) => sum + t.price, 0);
 
   return `THALI RECEIPT
----
-Customer: ${customer}
-${lines}
----
-Total: Rs.${total}
-Items: ${thalis.length}`;
+  ---
+  Customer: ${customer}
+  ${lines}
+  ---
+  Total: Rs.${total}
+  Items: ${thalis.length}`;
 }
